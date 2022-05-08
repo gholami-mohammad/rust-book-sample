@@ -1,7 +1,7 @@
+use colored::{self, Colorize};
 use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
-use colored::{self, Colorize};
 
 fn main() {
     println!("Guess the a number between 1 and 10!");
@@ -19,7 +19,7 @@ fn main() {
 
         println!("You guessed: {}", guess);
 
-        let guess: u32 = match guess.trim().parse(){
+        let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => {
                 println!("Please provide a valid number");
@@ -29,11 +29,11 @@ fn main() {
 
         match guess.cmp(&secret_number) {
             Ordering::Equal => {
-                println!("{}","You win!!!".green());
+                println!("{}", "You win!!!".green());
                 break;
-            },
+            }
             Ordering::Greater => println!("{}", "Too big".red()),
-            Ordering::Less => println!("{}","Too small".red()),
+            Ordering::Less => println!("{}", "Too small".red()),
         }
     }
 }
