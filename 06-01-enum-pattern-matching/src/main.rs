@@ -50,8 +50,8 @@ fn main() {
         no.string()
     );
 
-    println!("is_linus: {}", win7.is_linux());
-    println!("is_linus: {}", ubuntu.is_linux());
+    println!("is_linux: {}", win7.is_linux());
+    println!("is_linux: {}", ubuntu.is_linux());
 
     // using Option<T>
     let age : Option<i32> = Some(10);
